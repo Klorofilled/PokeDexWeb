@@ -4,7 +4,7 @@ body h1 {
 
 #container {
     display: flex;
-    flex-wrap: wrap;/* Make responsive...essentially*/
+    flex-wrap: wrap;/* Make responsive...essentially */
     justify-content: center;/* Horizontally center the boxes */
     align-items: center;/* Vertically center the boxes */
     height: 100vh;/* Set the container height to the viewport height for vertical centering */
@@ -26,4 +26,19 @@ body h1 {
 .pokemon:hover {
     transform: translateY(-5px);/* Move the element up on hover for a bounce effect */
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);/* Add a shadow on hover */
+}
+
+@media (max-width: 600px) {
+    .pokemon {
+        width: calc(25% - 20px); /* Set the width to 50% of the container minus margins */
+        max-width: 200px; /* Set a maximum width to prevent cards from becoming too small */
+        min-width: 75px;
+        /* Set a minimum width for the cards */
+    }
+    .pokemon img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%; /* Ensure the image fits within the card's width */
+        height: auto; /* Maintain the image's aspect ratio */
+    }
 }
