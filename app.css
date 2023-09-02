@@ -1,21 +1,29 @@
 body h1 {
     text-align: center;
 }
+
 #container {
     display: flex;
-    flex-wrap: wrap; /* Make responsive...essentially*/
-    justify-content: center; /* Horizontally center the boxes */
-    align-items: center; /* Vertically center the boxes */
-    height: 100vh; /* Set the container height to the viewport height for vertical centering */
+    flex-wrap: wrap;/* Make responsive...essentially*/
+    justify-content: center;/* Horizontally center the boxes */
+    align-items: center;/* Vertically center the boxes */
+    height: 100vh;/* Set the container height to the viewport height for vertical centering */
 }
+
 .pokemon {
-    text-align: center; /* Align text in box to center */
-    background-color: #f2f2f2; /* Grey background color */
-    border-radius: 10px; /* Rounded corners */
-    padding: 10px; /* Padding inside the box */
-    margin: 10px; /* Margin around the box */
-    border: 1px solid #d1d1d1; /* border around the box */
+    text-align: center;/* Align text in box to center */
+    background-color: #f2f2f2;/* Grey background color */
+    border-radius: 10px;/* Rounded corners */
+    padding: 10px;/* Padding inside the box */
+    margin: 10px;/* Margin around the box */
+    border: 1px solid #d1d1d1;/* border around the box */
 }
-    .pokemon img {
-        display: block;
-    }
+
+.pokemon img {
+    display: block;
+}
+
+.pokemon:hover {
+    transform: translateY(-5px);/* Move the element up on hover for a bounce effect */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);/* Add a shadow on hover */
+}
