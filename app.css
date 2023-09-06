@@ -24,6 +24,7 @@ body h1 {
 }
 
 .pokemon:hover {
+    background-color: #fffbef;
     transform: translateY(-5px);/* Move the element up on hover for a bounce effect */
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);/* Add a shadow on hover */
 }
