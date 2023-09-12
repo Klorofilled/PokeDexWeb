@@ -33,6 +33,8 @@ async function fetchAndDisplayPokemon() {
         const num = document.createElement('span')
         num.innerText = `${i}`
         const label = document.createElement('span');
+
+        // Create and add Pokémon images
         const newImg = document.createElement('img');
         newImg.src = `${imgURL}${i}.png`
 
