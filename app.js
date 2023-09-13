@@ -26,13 +26,26 @@ async function getPokemonData(id) {
     }
 }
 
+// Hide the loader when the content is loaded
+function hideLoader() {
+    const loader = document.querySelector('.loader');
+    if (loader) {
+        loader.style.display = 'none';
+    }
+}
+
 async function fetchAndDisplayPokemon() {
+    // Counter to track processed Pokémon
+    let pokemonCount = 0; 
+
     for (let i = 1; i <= 151; i++) {
         const pokemon = document.createElement('div');
         pokemon.classList.add('pokemon');
         const num = document.createElement('span')
         num.innerText = `${i}`
         const label = document.createElement('span');
+
+        // Create and add Pokémon images
         const newImg = document.createElement('img');
         newImg.src = `${imgURL}${i}.png`
 
@@ -43,7 +56,14 @@ async function fetchAndDisplayPokemon() {
         pokemon.appendChild(newImg);
         pokemon.appendChild(label);
         newImg.appendChild(num);
-        container.appendChild(pokemon)
+        container.appendChild(pokemon);
+        // Increment the counter for each Pokémon processed
+        pokemonCount++; 
+
+        //Check if all Pokémon have been processed, then hide the loader
+        if (pokemonCount === 151) {
+             hideLoader();
+        }
     }
 }
 
